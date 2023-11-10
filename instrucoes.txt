@@ -1,0 +1,67 @@
+Trabalho 02
+
+Grupos de até 4 pessoas. 
+
+Considerando as séries históricas dos arquivos de dados do tipo CSV:
+BRL=X (Valor do Dólar em Reais)
+^BVSP (Índice da bolsa de valores do Brasil)
+Petroleo Tratado (Valor do Barril de Petróleo)
+Ouro Tratado (Valor do ouro)
+e
+Goll4SA
+
+Monte uma estrutura de predição(ções) para os valores das ações da empresa GOL (GOLL4SA) considerando como características os valores de fechamento (colunas close ou último) do Dólar, Petróleo, Ouro e Índice da Bolsa de valores.
+
+Use, preferencialmente, a regressão linear. 
+
+Apresente a avaliação do seu modelo pela média dos erros e pela raíz quadrada do quadrado dos erros para uma amostra de teste de 25% da massa de dados.
+
+ATENÇÃO: 
+1) Os dados de Ouro e Petróleo estão com a ordenação de datas diferente dos demais arquivos. Todos precisam estar com a mesma ordem das datas.
+2) a Janela de dados é parecida, mas não está exatamente igual. O conjunto de datas precisa ser o mesmo.
+
+
+
+É permitido preencher os dados que eventualmente estejam faltando com a média, mediana ou moda. Também é permitido dropar a linha com algum dado que não esteja presente naquela data.
+
+Lembre-se que a quantidade de linhas da amostra de treinamento/teste (X) tem que ser identica as da amostra de respostas de treinamento/testes (y).
+
+Os trabalhos serão avaliados na data de correção da P2 da seguinte forma:
+1) Se executar sem bug, passa para próxima etapa, senão nota = 0.
+2) Tratamento dos arquivos antes do treinamento da máquina. Estão em ordem, na mesma janela, os dados corretos estão sendo carregados.
+3) A impressão das duas métricas de testes.
+4) Teste com amostra fornecida pelo professor na hora da apresentação com os valores do Dólar, Petróleo, Ouro e Índice da Bolsa. A amostra pode ter de 1 a N dados. Será fornecida como uma lista ordenada para o predict, bastando copiar e colar a amostra e realizar novas avaliações com esta massa e o resultado correspondente (também será informado pelo professor).
+5) Comentários do código 
+
+Qualquer pessoa do grupo pode ser questionada ao longo da apresentação. 
+
+Quem não estiver presente na data poderá apresentar o trabalho no dia da aplicação da P3, após a sua aplicação.
+
+Qualquer dúvida podem mandar pelo ZAP ou por e-mail.
+
+Após iniciar a apresentação do trabalho não serão permitidos ajustes no código e nem nos dados. TESTEM antes de apresentar. Na dúvida, TESTEM de novo.
+
+-------------- Pontos extras ----------------
+
+Valerá um ponto extra no trabalho, limitado à nota 10, cada um dos desafios:
+1) Ao invés de partir do arquivo de ouro e petróleo tratados, usar os arquivos DESAFIO das duas séries e tratar os ajustes em código.
+2) Criar um filtro de intervalo de datas para dar carga nas amostras. Exemplo: Usar dados entre 1/01/2023 a 30/10/2023 para treinamento da máquina. Não precisa ter interface para pedir as datas, pode ser hard coded em constantes.
+3) Usar outro modelo estatístico de treinamento. Apresentar o teste de eficácia comparando com o de regressão linear (ambos os modelos devem ser implementados e testados com as mesmas massas de treino/teste).
+4) Sem considerar as linhas usadas para ajustar os arquivos (não serão contadas neste desafio) entregar o trabalho com 30 ou menos linhas de código. Ponto extra se for menos de 25 linhas.
+5) Comentar o código com docstrings (https://medium.com/pelando/dicas-de-como-documentar-suas-fun%C3%A7%C3%B5es-em-python-161572f787f6)  gerando uma página em HTML com ele.
+
+---------------------------------------------------------
+
+Quem fizer os 15 pontos ganha um presente de até R$10,00. Pode escolher entre um bombom, uma long neck (não alcóolica), um certificado de 15 pontos, bem bonitinho, assinado pelo seu professor ou qlq outra coisa que seja permitida pelas normas. :) (texto legal para evitarmos problemas...)
+
+---------------------------------------------------------
+
+Boa sorte e bom trabalho.
+
+Não inventem código desnecessário!!! 
+
+O trabalho parece enorme, mas não é. Em caso de dúvidas volte e reveja as aulas.
+
+Pesquise como inverter a ordem de linhas de um dataframe para resolver o problema da ordenação das datas (#FicaADica).
+
+PS: O conteúdo para executar o trabalho será visto até a aula 10, não se desesperem com a "complexidade" antes de termos todas as aulas.
